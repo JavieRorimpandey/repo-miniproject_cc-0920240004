@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azure Serverless Application</title>
+<style>
+body{
+    margin:0;
+    min-height:100vh;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#312e81);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.container{
+    width:700px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:24px;
+    padding:35px;
+    color:white;
+    box-shadow:0 20px 40px rgba(0,0,0,0.35);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#cbd5e1;
+    margin-bottom:25px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:16px;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    color:#67e8f9;
+    margin-top:0;
+}
+
+input,select{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:white;
+    margin-top:8px;
+    margin-bottom:15px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#06b6d4;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#0891b2;
+}
+
+pre{
+    background:#020617;
+    color:#22c55e;
+    padding:15px;
+    border-radius:12px;
+    overflow:auto;
+}
+
+.footer{
+    text-align:center;
+    color:#94a3b8;
+    margin-top:20px;
+    font-size:14px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>Azure Serverless Application</h1>
+<p class="subtitle">Sistem kalkulator estimasi biaya kegiatan mahasiswa menggunakan Azure Static Web Apps & Azure Functions</p>
+
+<div class="card">
+    <h3>Identitas Mahasiswa</h3>
+    <p><strong>Nama:</strong> Muhammad Azmi Wibowo</p>
+    <p><strong>NIM:</strong> 0920240004</p>
+    <p><strong>Mata Kuliah:</strong> Komputasi Awan</p>
+    <p><strong>Layanan Azure yang Digunakan:</strong></p>
+    <ul>
+        <li>Azure Static Web Apps (Frontend)</li>
+        <li>Azure Functions (API Estimasi Biaya)</li>
+        <li>GitHub Actions (CI/CD)</li>
+        <li>Azure Portal (Manajemen Resource)</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h3>Kalkulator Estimasi Konsumsi</h3>
+    <label>Jumlah Peserta :</label>
+    <input type="number" value="40">
+
+    <label>Jenis Konsumsi :</label>
+    <select>
+        <option>Snack — Rp15.000</option>
+        <option>Makan — Rp30.000</option>
+        <option>Lengkap — Rp45.000</option>
+    </select>
+
+    <button>Hitung Estimasi Biaya</button>
+
+    <h3>Response JSON (Azure Functions API):</h3>
+    <pre>
+{
+  "jumlah": 40,
+  "jenis": "snack",
+  "hargaPerPeserta": 15000,
+  "total": 600000,
+  "timestamp": "2026-06-02T02:43:20.891Z"
+}
+    </pre>
+</div>
+
+<div class="footer">
+Politeknik Astra • Teknologi Rekayasa Perangkat Lunak
+</div>
+
+</div>
+
+</body>
+</html>
